@@ -32,7 +32,7 @@ module.exports = (_, argv) => {
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: "public/index.html",
+        template: "index.html",
       }),
     ],
     devtool: isProd ? "source-map" : "eval-source-map",
@@ -42,7 +42,7 @@ module.exports = (_, argv) => {
       hot: true,
       compress: true,
       client: { overlay: true },
-      static: { directory: path.join(__dirname, "public") },
+      static: { directory: path.join(__dirname) },
     },
     optimization: {
       splitChunks: { chunks: "all" },
