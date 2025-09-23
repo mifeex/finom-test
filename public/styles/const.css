@@ -23,11 +23,14 @@
   /* font-sizes */
   --font-size-text-xs: 12px;
   --font-size-text-sm: 16px;
+  --font-size-text-md: 20px;
   --font-size-header-xs: 20px;
   --font-size-header-sm: 24px;
+  --font-size-header-md: 32px;
   --line-height-basic: 100%;
   --line-height-xs: 24px;
   --line-height-sm: 28px;
+  --line-height-md: 36px;
   --letter-spacing-xs: 0.5px;
 
   /* animation */

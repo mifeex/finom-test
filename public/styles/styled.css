@@ -67,6 +67,11 @@
     font-size: var(--font-size-header-sm);
     line-height: var(--line-height-sm);
   }
+
+  @media (min-width: 1280px) {
+    font-size: var(--font-size-header-md);
+    line-height: var(--line-height-md);
+  }
 }
 
 .banner__content {
@@ -79,16 +84,29 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: 1280px) {
+    flex-direction: column;
+  }
 }
 
 .banner__content-text,
 .banner__content-benefits-item {
   font-size: var(--font-size-text-sm);
   line-height: var(--line-height-xs);
+
+  @media (min-width: 1280px) {
+    font-size: var(--font-size-text-md);
+    line-height: var(--line-height-sm);
+  }
 }
 
 .banner__content-text {
   font-weight: 400;
+
+  @media (min-width: 1280px) {
+    max-width: 600px;
+  }
 }
 
 .banner__content-benefits {
@@ -149,6 +167,12 @@
   &:hover {
     background-color: var(--btn-primary-color-hover);
   }
+
+  @media (min-width: 1280px) {
+    font-size: var(--font-size-text-md);
+    line-height: var(--line-height-sm);
+    max-height: unset;
+  }
 }
 
 .banner__interactive-information {
@@ -163,6 +187,11 @@
   &:hover {
     color: var(--primary-text-color);
   }
+
+  @media (min-width: 1280px) {
+    font-size: var(--font-size-text-sm);
+    line-height: var(--line-height-xs);
+  }
 }
 
 .banner__image {
@@ -172,13 +201,18 @@
   display: none;
   transform: translate(10px, 40px);
 
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+
   @media (min-width: 600px) {
     display: block;
     width: 300px;
+  }
 
-    img {
-      width: 100%;
-      object-fit: contain;
-    }
+  @media (min-width: 1280px) {
+    transform: translate(0, 20px);
+    width: 700px;
   }
 }
