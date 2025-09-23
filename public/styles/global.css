@@ -1,0 +1,7 @@
+* {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  color: var(--primary-text-color);
+}

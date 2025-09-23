@@ -1,0 +1,39 @@
+:root {
+  /* colors */
+  --default-color: #fff;
+  --background-color: rgba(11, 0, 46, 0.05);
+  --background-color-hover: rgba(11, 0, 46, 0.1);
+  --btn-primary-color: #ff4c5c;
+  --btn-primary-color-hover: #df3240;
+  --primary-text-color: #0b002e;
+  --secondary-text-color: rgba(11, 0, 46, 0.64);
+  --border-color: #6666ff;
+
+  /* numbers */
+  --spacing-xs: 12px;
+  --spacing-sm: 20px;
+  --spacing-md: 32px;
+  --spacing-lg: 44px;
+  --border-radius-circle: 50%;
+  --border-radius: 12px;
+
+  /* borders */
+  --border: 2px solid var(--border-color);
+
+  /* font-sizes */
+  --font-size-text-xs: 12px;
+  --font-size-text-sm: 16px;
+  --font-size-header-xs: 20px;
+  --font-size-header-sm: 24px;
+  --line-height-basic: 100%;
+  --line-height-xs: 24px;
+  --line-height-sm: 28px;
+  --letter-spacing-xs: 0.5px;
+
+  /* animation */
+  --fade-animation: all 0.5s ease;
+
+  /* breakpoints */
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 600px;
+}
