@@ -32,7 +32,7 @@ module.exports = (_, argv) => {
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: "index.html",
+        template: "public/index.html",
       }),
     ],
     devtool: isProd ? "source-map" : "eval-source-map",
