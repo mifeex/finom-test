@@ -133,7 +133,7 @@
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
-    background: no-repeat center / contain url("../assets/images/check.svg");
+    background: no-repeat center / contain url("../assets/images/check.svg?markup");
   }
 }
 
