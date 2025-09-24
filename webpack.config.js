@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (_, argv) => {
   const isProd = argv.mode === "production";
@@ -21,7 +22,7 @@ module.exports = (_, argv) => {
         {
           test: /\.css$/i,
           use: [
-            "style-loader",
+            isProd ? MiniCssExtractPlugin.loader : "style-loader",
             {
               loader: "css-loader",
               options: { importLoaders: 1, sourceMap: !isProd },
@@ -47,6 +48,13 @@ module.exports = (_, argv) => {
       new HtmlWebpackPlugin({
         template: "public/index.html",
       }),
+      ...(isProd
+        ? [
+            new MiniCssExtractPlugin({
+              filename: "assets/[name].[contenthash].css",
+            }),
+          ]
+        : []),
     ],
     devtool: isProd ? "source-map" : "eval-source-map",
     devServer: {

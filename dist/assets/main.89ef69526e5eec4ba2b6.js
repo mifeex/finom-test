@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfinom_test=self.webpackChunkfinom_test||[]).push([[792],{156:()=>{const e=document.getElementById("app"),n=document.querySelector(".banner"),t=document.querySelector(".banner__close");t?.addEventListener("click",()=>{e&&n&&(n.remove(),e.innerText="banner was removed")},{once:!0})}},e=>{e(e.s=156)}]);
+//# sourceMappingURL=main.89ef69526e5eec4ba2b6.js.map
