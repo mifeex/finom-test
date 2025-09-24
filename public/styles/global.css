@@ -5,3 +5,7 @@
   margin: 0;
   color: var(--primary-text-color);
 }
+
+@custom-media --bp-mobile (min-width: 600px);
+@custom-media --bp-tablet (min-width: 768px);
+@custom-media --bp-desktop (min-width: 1280px);

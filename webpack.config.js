@@ -18,8 +18,21 @@ module.exports = (_, argv) => {
     module: {
       rules: [
         { test: /\.tsx?$/, use: "ts-loader", exclude: /node_modules/ },
-        { test: /\.css$/i, use: ["style-loader", "css-loader"] },
-        { test: /\.(png|jpe?g|gif|svg|woff2?)$/i, type: "asset/resource" },
+        {
+          test: /\.css$/i,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: { importLoaders: 1, sourceMap: !isProd },
+            },
+            {
+              loader: "postcss-loader",
+              options: { sourceMap: !isProd },
+            },
+          ],
+        },
+        { test: /\.(png|jpe?g|gif|woff2?)$/i, type: "asset/resource" },
         {
           test: /\.svg$/i,
           oneOf: [
